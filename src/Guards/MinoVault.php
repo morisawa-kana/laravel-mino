@@ -17,7 +17,7 @@ class MinoVault
     {
         $index = (int) (($id - 1) / self::PER_HASH) + 1;
 
-        return "mino_auth:{$scope}:{$index}";
+        return config('kaede.cache.prefix', 'default')."mino_auth:{$scope}:{$index}";
     }
 
     public static function sync(string $scope, int $id, string $hash, bool $isBanned, int $exp): void

@@ -1,4 +1,5 @@
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Morisawa Auth Config
@@ -16,6 +17,7 @@ return [
     // redis cache database
     'cache' => [
         'database' => 'default',
+        'prefix' => env('APP_NAME').':',
         'expire' => 7 * 24 * 3600,
     ],
 
